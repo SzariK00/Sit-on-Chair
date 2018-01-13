@@ -31,3 +31,104 @@
     white-space: nowrap; /* 1 */
 }
 
+/*---------------------*/
+/*layout*/
+/*---------------------*/
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*---------------------*/
+/*page header*/
+/*---------------------*/
+
+.page-header {
+    height: 42px;
+    background-color: black;
+}
+
+.page-logo {
+    float: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.page-logo a {
+    color: white;
+    text-decoration: none;
+    line-height: 42px;
+    display: block;
+}
+
+.page-logo span {
+    font-weight: 700;
+    color: #24BAA0;
+}
+
+.page-nav {
+    float: right;
+}
+
+.page-nav ul {
+
+}
+
+.page-nav li {
+    display: inline-block;
+    position: relative;
+}
+
+.page-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 25px;
+    font-size: 14px;
+    line-height: 42px;
+}
+
+.page-nav-submenu {
+    background-color: black;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translate(-50%, 0); /*wyśrodkowanie dokładnie w połowie*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+}
+
+.page-nav li:hover .page-nav-submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-nav-submenu:before {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.page-nav-submenu:after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    background: transparent;
+}
+
+.page-nav-submenu a {
+    text-transform: none;
+    font-weight: normal;
+    line-height: 2.7em;
+}
